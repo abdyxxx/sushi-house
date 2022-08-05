@@ -1,0 +1,42 @@
+[
+    {   "type": "module",
+        "id": "1",
+        "type": "roll",
+        "name": "Эби тамаго тен",
+        "amount": "8",
+        "price": "2300",
+        "img": "img/cars/notebook_lenovo.jpg"
+    },
+    {
+        "id": "2",
+        "type": "roll",
+        "name": "Филадельфия люкс",
+        "amount": "8",
+        "price": "2400",
+        "img": "img/cars/notebook_lenovo.jpg"
+    },
+    {
+        "id": "3",
+        "type": "roll",
+        "name": "Такуан",
+        "amount": "8",
+        "price": "2000",
+        "img": "img/cars/notebook_lenovo.jpg"
+    },
+    {
+        "id": "4",
+        "type": "roll",
+        "name": "Канада",
+        "amount": "8",
+        "price": "2200",
+        "img": "img/cars/notebook_lenovo.jpg"
+    },
+    {
+        "id": "5",
+        "type": "roll",
+        "name": "Калифорния Эби",
+        "amount": "8",
+        "price": "2100",
+        "img": "img/cars/notebook_lenovo.jpg"
+    }
+]

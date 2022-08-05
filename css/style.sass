@@ -1,0 +1,408 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+$second-color: #ff3700
+%fira-sans
+    font-family: 'Fira Sans', sans-serif
+    font-family: 'Libre Baskerville', serif
+    font-family: 'Open Sans', sans-serif
+header
+    background-color: #fff
+    box-shadow: 0 5px 30px
+    position: sticky
+    top: 0px
+    z-index: 1999999
+.wrapper
+    max-width: 1180px
+    margin: 0 auto
+.header__logo 
+    a
+        height: 0
+    img
+        height: 140px
+a 
+    text-decoration: none
+    color: black
+.header-wrapper
+    @extend %fira-sans
+    font-size: 20px
+    font-weight: 600
+    display: flex
+    justify-content: space-between
+    padding: 15px 0
+.header__middle-block
+    flex-grow: 1
+    padding: 10px 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.cart-icon
+    border: 3px solid $second-color
+    border-radius: 50%
+    padding: 15px 15px 10px 10px
+    align-self: center
+    cursor: pointer
+    &:hover
+        background-color: $second-color
+    svg
+        height: 40px
+.header__menu
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    align-items: center
+.header__menu-item
+    display: flex
+    flex-direction: column
+    list-style: none
+    font-family: 'Fira Sans', sans-serif
+    font-size: 1.15em
+    font-weight: 500
+.header__menu-item
+        a
+            transition: .3s 
+            &:hover
+                color: $second-color
+.header__menu-item::after
+    display: inline-block
+    content: ''
+    height: 3px
+    width: 100%
+    background-color: $second-color
+.cart-svg
+    fill: $second-color
+.cart-icon:hover .cart-svg 
+    fill: #fff
+.header__contact, .footer__contact
+    display: flex
+    a
+        color: $second-color
+    img
+        height: 35px
+        margin: 0 10px
+    #instLogo
+        margin: 0 10px 0 auto
+.footer__contact
+    a
+        color: #fff
+.recommend
+    color: $second-color
+    margin: 0 auto 5%
+    font-size: 2em
+    font-weight: 600
+.content-wrapper
+    @extend %fira-sans
+    display: flex
+    flex-direction: column
+.slider
+    width: 100%
+    overflow: hidden
+    position: relative
+    margin-bottom: 5% 
+    .slider__roll
+        position: relative
+        left: 0px
+        display: flex
+        max-height: 65%
+        transition: .3s
+.slider__arrows
+    position: absolute
+    top: 43%
+    display: flex
+    justify-content: space-between
+    width: 100%
+    .slider__arrow
+        cursor: pointer
+    svg
+        height: 70px
+        fill: rgba(255, 255, 255, 0.33)
+        &:hover
+            fill: #fff
+.cards
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+    width: 100%
+    align-items: stretch
+.goods-title
+    font-family: 'Fira Sans', sans-serif
+    margin: 0 auto 4vh
+    font-size: 3em
+    font-weight: 700
+    color: $second-color
+.good
+    display: flex
+    flex-direction: column
+    border: 1px solid grey
+    border-radius: 30px
+    text-align: center
+    box-shadow: 0px 0px 8px grey
+    overflow: hidden
+    font-family: 'Fira Sans', sans-serif
+    height: 100%
+    &:hover
+        box-shadow: 0px 0px 24px $second-color
+        
+    .good__name
+        font-size: 1.8em
+        font-weight: 700
+        margin: 10px 0 20px
+    .good__description, ul
+        font-weight: 300
+        margin-bottom: 20px
+    .good__price
+        font-size: 1.5em
+        font-weight: 700
+        margin-bottom: 20px
+        .price__word
+            font-weight: 500
+            font-size: 0.8em
+    .good-info
+        background-color: $second-color
+        color: #fff
+        padding: 20px
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    .good__add
+        bottom: 0
+        padding: 10px
+        background-color: #fff
+        border: 1px solid $second-color
+        border-radius: 15px
+        color: $second-color
+        font-family: 'Fira Sans', sans-serif
+        font-weight: 700
+        font-size: 1.2em
+        cursor: pointer
+    .good__add:active
+        background-color: $second-color
+        color: #fff
+        border: 3px solid #fff
+        padding: 8px
+.good__img
+    height: 220px
+    width: 220px
+    display: block
+    margin: 0 auto
+
+.order-table
+    font-family: 'Open Sans', sans-serif
+    max-width: 991px 
+    border: 4px solid $second-color
+    border-radius: 40px
+    margin: 0 auto
+    overflow: hidden
+    .order-product
+        display: grid
+        width: 100%
+        grid-template-columns: repeat(7, 1fr)
+        grid-template-areas: "A B B B B C D"
+        align-items: center
+        justify-items: center
+        padding: 10px
+        gap: 15px
+        border-bottom: 1px solid grey
+        .order-product__img
+            grid-area: A
+            justify-self: start
+            max-width: 140px
+        .order-product__counter
+            grid-area: C
+        
+.order-product__counter
+    display: flex
+    align-items: center
+    .order-product__number
+        border: 1px solid
+        border-radius: 5px
+        padding: 4px 8px
+        margin: 0 3px 0 6px
+.order-product__sum
+    grid-area: D
+    font-size: 1.3em
+    min-width: 60px
+.order-product__name
+    grid-area: B
+    font-size: 1.3em
+    font-weight: 500
+.counter-btn
+    cursor: pointer
+    padding: 0 15px
+    font-size: 1.9em
+.cart-title
+    text-align: center
+    color: $second-color
+    font-family: 'Fira Sans', sans-serif
+    font-size: 1.5em
+    font-weight: 700
+    margin-bottom: 30px
+.make-order   
+    font-family: 'Fira Sans', sans-serif
+    font-size: 1.5em
+    font-weight: 500
+    margin: 15px 0
+    display: flex
+    align-items: center
+    row-gap: 15px
+    flex-direction: column
+    button
+        padding: 15px 35px
+        border: 3px solid $second-color
+        border-radius: 20px
+        background-color: $second-color
+        color: #fff
+        font-family: 'Fira Sans', sans-serif
+        font-size: 1em
+        font-weight: 600
+        cursor: pointer
+        &:hover
+            background-color: #fff
+            color: $second-color
+
+.stock-container
+    width: 100%
+.stock-img
+    width: 100%
+.delivery-wrapper
+    text-align: center
+    display: flex
+    align-items: center
+    p
+        font-size: 1.4em
+        line-height: 2em
+    .title
+        font-weight: 700
+        font-size: 2em
+        color: $second-color
+    .zone
+        font-weight: 600
+    .red-zone
+        color: red
+    .green-zone
+        color: green
+    .violet-zone
+        color: #9700ce
+footer
+    margin-top: 100px
+    background-color: $second-color
+    display: flex
+    align-items: center
+    img
+        height: 100px
+.footer__contact
+    display: flex
+    flex-grow: 1
+    display: none
+.contact-phone
+    display: flex
+    align-items: center
+    a
+        font-family: 'Open-sans', sans-serif
+        display: block
+        font-size: 1.3em
+
+@media (max-width: 1200px) 
+    .slider__arrow
+        svg
+            height: 60px
+@media (max-width: 991px)
+    .header__middle-block
+        justify-content: center
+        padding: 30px 10px
+    .cards
+        grid-template-columns: repeat(2, 1fr)
+    .header__contact
+        display: none
+    .footer__contact
+        display: flex
+    .header__menu
+        align-items: center
+        display: flex
+        flex-wrap: nowrap
+        gap: 20px
+    .cart-icon
+        position: fixed
+        bottom: 10px
+        right: 10px
+        padding: 25px 25px 20px 20px
+        border: 5px solid black
+        background-color: $second-color
+        box-shadow: 0 0 10px
+        svg
+            fill: #fff
+            width: 64px 
+            height: 64px
+    .header__logo
+        img
+            height: 100px
+    .header-wrapper
+        padding: 0
+@media (max-width: 767px)
+    .content-wrapper
+        padding: 0 10px
+    .header__menu
+        gap: 35px
+    .header__middle-block
+        font-size: 1.6em
+        flex-wrap: nowrap
+    .header-wrapper
+        display: block
+        .header__logo
+            text-align: center
+            img
+                height: 120px
+    .cards
+        grid-template-columns: repeat(1, 1fr)
+    .good__img
+        height: 400px
+        width: 400px
+
+    .header__middle-block
+        overflow: auto
+    .order-product__img
+        max-height: 110px
+    .delivery-wrapper
+        text-align: left
+    .order-product__sum
+        font-size: 1em
+
+@media (max-width: 530px)
+    .content-wrapper
+        padding: 0 5px
+    .good__img
+        height: 300px
+        width: 300px
+@media (max-width: 480px)
+    .header__menu-item
+        font-size: 0.7em
+    .order-product__name
+        font-size: 0.9em
+    .order-product__img
+        max-height: 90px
+
+@media (max-width: 420px)
+    .order-product__img
+        max-height: 70px
+    .counter-btn
+        padding: 0 4px
+
+@media (max-width: 320px)
+    .good__img
+        height: 200px
+        width: 200px
+    .cart-icon
+        svg
+            height: 35px
+            width: 35px 
+    .order-product__img
+        max-height: 35px
+    .order-product__number
+        font-size: 0.8em
+    .order-product__sum
+        font-size: 0.8em
+        min-width: 50px
+    .order-table
+        border: 2px solid $second-color

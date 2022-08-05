@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: rgb(220, 167, 220);
+  height: 120px;
+  text-align: center;
+  padding-top: 20px;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: rgb(226, 209, 226);;
+}
+header h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: rgb(71, 0, 71);
+  font-size: 50px;
+}
+.btnsWrapper{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+.btn{
+  height: 30px;
+  width: max-content;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 133333; 
+  background-color: rgba(83, 83, 83, 0.477);
+  cursor: pointer;
+}
+.btn svg{
+  height: 30px;
+  width: 30px;
+}
+path{
+  fill: #fff;
+  stroke: #000000;
+  stroke-width: 2px;
+  
+}
+img{
+  width: 300px;
+  line-height: 0;
+}
+.slider{
+  margin: 50px 10%;
+  
+  overflow: hidden;
+  position: relative;
+  vertical-align: center;
+  border: 30px rgb(112, 0, 112);
+  
+}
+.roll{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transition: 0.4s;
+}
+.slider-item{
+  text-align: center;
+}
+.block {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: end;
+  width: 500px;
+  flex-direction: column;
+}
+.block p{
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.btn-chayka{
+  width: 180px;
+  padding: 10px;
+  background-color: rgb(112, 0, 112);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;;
+  cursor: pointer;
+}
+.btn-chayka:hover{
+  color: rgb(112, 0, 112);
+  background-color: white;
+  transition: 0.7s;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;600;700&family=Libre+Baskerville&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rolls.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сеты - Доставка Суши Караганда</title>
+</head>
+<body>
+        <header>
+            <div class="wrapper header-wrapper">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="img/logo.jpg" alt="LOGO" srcset="">
+                    </a>
+                </div>
+                <div class="header__middle-block">
+                    <div class="header__contact">
+                        <img src="img/phone.svg" id="phoneLogo" alt="">
+                        <a href="tel:+77477986493">+7 (777) 757 55 77</a>
+                        <a id="instLogo" target = "_blank" href="https://www.instagram.com/sushi_house_krg/">
+                            <img src="img/inst.svg" alt="">
+                        </a>
+                    </div>
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="rolls.html">Роллы</a></li>
+                        <li class="header__menu-item"><a href="sets.html">Сеты</a></li>
+                        <li class="header__menu-item"><a href="pizza.html">Пицца</a></li>
+                        <li class="header__menu-item"><a href="drinks.html">Напитки</a></li>
+                        <li class="header__menu-item"><a href="snacks.html">Закуски</a></li>
+                        <li class="header__menu-item"><a href="stock.html">Акции</a></li>
+                        <li class="header__menu-item"><a href="delivery.html">Доставка</a></li>
+                    </ul>
+                </div>
+                <div class="cart-icon"> 
+                    <a href="cart.html">
+                        <svg class="cart-svg" width="44px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z"/><circle cx="10.5" cy="19.5" r="1.5"/><circle cx="17.5" cy="19.5" r="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>    
+        </header>
+        <div class="content">
+            <div class="wrapper content-wrapper">
+                <p class="goods-title">Сеты</p>
+                <div class="cards">
+                
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img src="img/logo.png" id="logo" alt="">
+            <div class="footer__contact">
+                <div class="contact-phone">
+                    <img src="img/phone-2.svg" id="phoneLogo" alt="">
+                    <a href="tel:+77477986493">+7 (777) 757 55 77</a>
+                </div>
+                <a id="instLogo" target = "_blank" href="https://www.instagram.com/sushi_house_krg/">
+                    <img src="img/inst-2.svg" alt="">
+                </a>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script>
+    
+    <script id="goods-template" type="text/template">
+        <% if(type == "sets"){ %>
+        <div class="good <%= type %>">
+            <img class="good__img" src="<%= img %>" alt="">
+            <div class="good-info">
+                <p class="good__name"><%= name %></p>
+                <!-- <p class="good__amount">
+                    Порция <%= amount %>шт
+                </p> -->
+                <p class="good__description">
+                    <ul>
+                        <li>Филадельфия с лососем</li>
+                        <li>Ролл Ника</li>
+                        <li>Дабл тамаго</li>
+                        <li>Панко сурими</li>
+                        <li>Филадельфия инари</li>
+                        <li>Кацу футомаки</li>
+                </ul>
+                </p>
+                <p class="good__price">
+                    <span class="price__word">Цена: </span> <span class="price__number"><%= price %></span> &#8376;
+                </p>
+                <button class="good__add" data-id="<%= id %>">Добавить в корзину</button>
+            </div>
+        </div>
+        <%}%>
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/addGood.js"></script>
+    <script src="js/addToCart.js"></script>
+</body>
+</html>
